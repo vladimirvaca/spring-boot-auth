@@ -1,0 +1,38 @@
+
+# top-most EditorConfig file
+root = true
+
+# All files
+[*]
+# Enforce Unix-style newlines
+end_of_line = lf
+# Ensure file ends with a newline
+insert_final_newline = true
+# Remove any whitespace characters preceding newline characters
+trim_trailing_whitespace = true
+# Set default charset
+charset = utf-8
+
+# Java files
+[*.{java,gradle,groovy}]
+indent_style = space
+indent_size = 4
+max_line_length = 120
+
+# XML files
+[*.xml]
+indent_style = space
+indent_size = 4
+
+# Properties files
+[*.properties]
+indent_style = space
+indent_size = 4
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false
+
+# Disable file name rules that would allow spaces
+[* *]
+file_naming_convention = snake_case

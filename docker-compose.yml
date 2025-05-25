@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:15.3-alpine
+    restart: always
+    environment:
+      - POSTGRES_DB=spring-boot-auth
+      - POSTGRES_USER=sba-user
+      - POSTGRES_PASSWORD=sba-password
+    ports:
+      - '5432:5432'
+    volumes:
+      - ../sba-db:/var/lib/postgresql/data
