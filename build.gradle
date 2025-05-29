@@ -64,3 +64,7 @@ tasks.register('installPreCommitGitHook', Copy) {
     from("$rootDir/pre-commit")
     into("$rootDir/.git/hooks/")
 }
+
+afterEvaluate {
+    tasks.getByPath("build").dependsOn("installPreCommitGitHook")
+}
