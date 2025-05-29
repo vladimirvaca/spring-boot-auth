@@ -59,3 +59,8 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+tasks.register('installPreCommitGitHook', Copy) {
+    from("$rootDir/pre-commit")
+    into("$rootDir/.git/hooks/")
+}
